@@ -29,4 +29,6 @@ for (const topic of topics) {
 openTopic(1);
 assert.ok(nodes.get('#tabPanels').innerHTML.includes('For newcomers to the United States'));
 assert.ok(nodes.get('#tabPanels').innerHTML.includes('Tipped minimum wage'));
+const vocabPanel = nodes.get('#tabPanels').innerHTML.match(/data-panel="1"[\s\S]*?<\/section>/)[0];
+assert.equal((vocabPanel.match(/Tip \/ Gratuity/g)||[]).length, 1, 'Vocabulary should not repeat its definition');
 console.log('PASS: 43 lessons render all 215 sections, including vocabulary and exercise answers.');
