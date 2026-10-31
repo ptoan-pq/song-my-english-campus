@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "jsdom": "30.1.3"
+  },
+  "name": "song-my-english-campus",
+  "private": true,
+  "scripts": {
+    "test": "node verify-content.mjs && node verify-interactions.mjs"
+  }
+}
